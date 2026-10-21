@@ -1,0 +1,26 @@
+Massmore_ST7789 — vendored TFT_eSPI 2.5.43 (Bodmer, https://github.com/Bodmer/TFT_eSPI, FreeBSD/MIT licence, see license.txt)
+
+Changes versus upstream (no functional change to the graphics code):
+ 1. Trimmed to what this product needs: ST7789 driver files only, ESP32 / ESP32-S3 / Generic processor
+    files only, no examples / docs / Tools / Kconfig / CMake / library metadata.
+ 2. Include-only fragments renamed so that recursive compilation of src/ (Arduino IDE 1.5 library layout
+    and PlatformIO) does not try to build them as translation units:
+      Processors/*.c   -> Processors/*.c.inc
+      Extensions/*.cpp -> Extensions/*.cpp.inc
+      Fonts/*.c        -> Fonts/*.c.inc
+    and the matching #include lines in TFT_eSPI.cpp / TFT_eSPI.h / Fonts/*.h were updated.
+ 3. #include <...> of TFT_eSPI's own files changed to #include "..." (relative), because the library
+    root is no longer on the compiler include path when vendored under src/vendor/.
+ 4. User_Setup.h replaced by a shim that includes ../../Massmore_ST7789_Config.h — the single place
+    where driver / panel / pin / font / SPI-clock configuration lives.
+ 5. Processors/TFT_eSPI_ESP32.c.inc: new option MASSMORE_ST7789_USE_GLOBAL_SPI makes the classic-ESP32 build use the
+    Arduino global `SPI` (VSPI) object instead of a private SPIClass(VSPI) instance, so the display and the SD card
+    share one bus object with one transaction lock (ESP32-S3 already uses the global `SPI`).
+ 6. Processors/TFT_eSPI_ESP32.c.inc + TFT_eSPI_ESP32_S3.c.inc, end_SDA_Read(): when MASSMORE_ST7789_MISO is defined,
+    the real MISO GPIO (shared with the SD card) is re-attached to the SPI peripheral after every half-duplex
+    SDA read (TFT_SDA_READ forces TFT_MISO to -1, which would otherwise leave the SD card without MISO).
+ 7. TFT_eSPI.cpp: two `#pragma GCC diagnostic ignored` lines (-Wmisleading-indentation, -Warray-bounds) so the
+    vendored code builds silently with the Massmore standard flags -Wall -Wextra on Arduino-ESP32 Core 3.x (GCC 14).
+ 8. TFT_Drivers/ST7789_Init.h: back-light pin is only driven when TFT_BL >= 0 (Massmore modules usually tie BLK to 3V3).
+ 9. Processors/TFT_eSPI_ESP32_S3.h: the "MISO = MOSI when MISO is -1" fallback is skipped when TFT_SDA_READ is
+    defined (TFT_eSPI.h resets TFT_MISO to -1 in that mode anyway and printed a #warning).
