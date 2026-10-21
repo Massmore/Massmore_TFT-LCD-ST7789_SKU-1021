@@ -3,10 +3,17 @@
 **Massmore TFT LCD ST7789 SPI 1.3" / 1.54" / 2.0" IPS Display Module — Touch (CST816) + Micro SD (SKU-1021)**
 Arduino IDE / PlatformIO driver library — *Designed and Manufactured by Massmore*
 
+<<<<<<< HEAD
 <!-- รูปสินค้า: วางไฟล์ docs/images/st7789-product-cover.jpg แล้วเอาคอมเมนต์บรรทัดล่างออก -->
 <!-- <p align="center"><img src="docs/images/st7789-product-cover.jpg" alt="Massmore ST7789 IPS display module" width="600"></p> -->
 
 > **เริ่มต้นเร็วที่สุด:** ต่อ SPI ตามตาราง §6 (3.3 V), เปิดตัวอย่าง `01_BasicDisplay` แล้ว upload — จอต้องแสดงแถบสี 8 สี
+=======
+![Massmore ST7789 IPS display module](docs/images/st7789-product-cover.png)
+<!-- TODO: [MASSMORE_INPUT_REQUIRED: product image docs/images/st7789-product-cover.png] -->
+
+> **เริ่มต้นเร็วที่สุด:** ต่อ SPI ตามตาราง §7 (3.3 V), เปิดตัวอย่าง `01_BasicDisplay` แล้ว upload — จอต้องแสดงแถบสี 8 สี
+>>>>>>> 852ba8a2cd7422c3d59368236a28446d3130c417
 > อยากได้ภาษาไทย: `tft.loadFont(Massmore_Font_Kanit_28); tft.drawThaiString("สวัสดี", 10, 10);` (ฟอนต์ฝังมาแล้ว ไม่ต้องติดตั้งอะไรเพิ่ม)
 
 ---
@@ -50,7 +57,12 @@ Arduino IDE / PlatformIO driver library — *Designed and Manufactured by Massmo
 
 ## 2. Pinout
 
+<<<<<<< HEAD
 <p align="center"><img src="docs/images/st7789-pinout.svg" alt="Massmore ST7789 pinout" width="900"></p>
+=======
+![Massmore ST7789 pinout](docs/images/st7789-pinout.png)
+<!-- TODO: [MASSMORE_INPUT_REQUIRED: pinout image docs/images/st7789-pinout.png and exact silkscreen names of the 2.0" header] -->
+>>>>>>> 852ba8a2cd7422c3d59368236a28446d3130c417
 
 | Pin | Function | Notes |
 |---|---|---|
@@ -65,7 +77,12 @@ Arduino IDE / PlatformIO driver library — *Designed and Manufactured by Massmo
 | `SD_CS`, `SD_MOSI`, `SD_MISO`, `SD_SCK` | Micro SD (รุ่น 2.0") | MOSI / SCK ต่อร่วมกับ `SDA` / `SCL` ของจอ, MISO ต่อ MISO ของ MCU |
 | `TP_SDA`, `TP_SCL` (`TP_INT`, `TP_RST`) | CST816 touch (รุ่น Touch) | I2C 3.3 V, INT / RST ไม่ต่อก็ได้ |
 
+<<<<<<< HEAD
 <p align="center"><img src="docs/images/st7789-esp32-wiring.svg" alt="ESP32 / ESP32-S3 wiring" width="900"></p>
+=======
+![ESP32 wiring](docs/images/st7789-esp32-wiring.png)
+<!-- TODO: [MASSMORE_INPUT_REQUIRED: wiring image docs/images/st7789-esp32-wiring.png — copy from https://www.massmore.shop/docs/32] -->
+>>>>>>> 852ba8a2cd7422c3d59368236a28446d3130c417
 
 ---
 
@@ -81,7 +98,11 @@ Compile matrix: ทุกตัวอย่าง (01–07) × ทุก environ
 คอร์อื่น (RP2040, STM32) TFT_eSPI รองรับ แต่ไลบรารีนี้ **ไม่ได้ตั้งค่าขาให้และไม่ได้ทดสอบ**
 
 > **ข้อแตกต่างจากไลบรารี Massmore ตัวอื่น:** ST7789 ถูกขับด้วย TFT_eSPI ซึ่งใช้ขาแบบ *compile-time* (direct register write + DMA)
+<<<<<<< HEAD
 > จึงไม่รับขาผ่าน constructor แต่รวมไว้ที่ไฟล์เดียว `src/Massmore_ST7789_Config.h` และ override ได้ด้วย `-D` flag (ดู §6)
+=======
+> จึงไม่รับขาผ่าน constructor แต่รวมไว้ที่ไฟล์เดียว `src/Massmore_ST7789_Config.h` และ override ได้ด้วย `-D` flag (ดู §7)
+>>>>>>> 852ba8a2cd7422c3d59368236a28446d3130c417
 
 ---
 
