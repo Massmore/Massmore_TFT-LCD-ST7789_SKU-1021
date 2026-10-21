@@ -1,0 +1,31 @@
+MIT License
+
+Copyright (c) 2026 Massmore Biz Co., Ltd. (https://www.massmore.shop)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+Third-party components bundled in src/vendor/ and src/fonts/:
+
+* TFT_eSPI 2.5.43 by Bodmer — FreeBSD / MIT licence (src/vendor/TFT_eSPI/license.txt)
+* Adafruit GFX FreeFonts — BSD licence (src/vendor/TFT_eSPI/Fonts/GFXFF/license.txt)
+* Kanit — Copyright 2020 The Kanit Project Authors (https://github.com/cadsondemak/kanit),
+  SIL Open Font License 1.1 (bitmap glyph data in src/fonts/Massmore_Font_Kanit_*.h)
+* Sarabun — Copyright 2018 The Sarabun Project Authors (https://github.com/cadsondemak/Sarabun),
+  SIL Open Font License 1.1 (bitmap glyph data in src/fonts/Massmore_Font_Sarabun_*.h)

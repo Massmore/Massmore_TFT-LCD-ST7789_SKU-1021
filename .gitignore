@@ -2,7 +2,7 @@
 .DS_Store
 
 # PlatformIO build/cache
-VSCode_PlatformIO/.pio/
+PlatformIO/.pio/
 .pio/
 
 # VS Code machine-specific

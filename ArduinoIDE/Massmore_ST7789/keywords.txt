@@ -1,0 +1,82 @@
+#######################################
+# Syntax colouring for Massmore_ST7789
+# KEYWORD1 = classes / datatypes
+# KEYWORD2 = methods / functions
+# LITERAL1 = constants
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Massmore_ST7789	KEYWORD1
+Massmore_ST7789_Touch	KEYWORD1
+ErrorCode	KEYWORD1
+ChipID	KEYWORD1
+Status	KEYWORD1
+Point	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+isReady	KEYWORD2
+lastError	KEYWORD2
+errorToString	KEYWORD2
+verifyChipID	KEYWORD2
+readChipID	KEYWORD2
+getSerialNumber	KEYWORD2
+isGenuine	KEYWORD2
+readStatus	KEYWORD2
+readPowerMode	KEYWORD2
+readPixelFormat	KEYWORD2
+readMADCTL	KEYWORD2
+readSelfDiagnostic	KEYWORD2
+readDisplayStatus	KEYWORD2
+readRegister	KEYWORD2
+hasReadSupport	KEYWORD2
+testFrameMemory	KEYWORD2
+sleep	KEYWORD2
+wake	KEYWORD2
+displayOn	KEYWORD2
+setBacklight	KEYWORD2
+setBrightness	KEYWORD2
+shapeThai	KEYWORD2
+drawThaiString	KEYWORD2
+thaiTextWidth	KEYWORD2
+printThai	KEYWORD2
+printConfig	KEYWORD2
+panelWidth	KEYWORD2
+panelHeight	KEYWORD2
+isConnected	KEYWORD2
+readFirmwareVersion	KEYWORD2
+readGesture	KEYWORD2
+touched	KEYWORD2
+getRaw	KEYWORD2
+getTouch	KEYWORD2
+setPanelSize	KEYWORD2
+setInvert	KEYWORD2
+setSwapXY	KEYWORD2
+update	KEYWORD2
+isDataReady	KEYWORD2
+getReadings	KEYWORD2
+setPollInterval	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MASSMORE_ST7789_VERSION_STR	LITERAL1
+MASSMORE_ST7789_ID1	LITERAL1
+MASSMORE_ST7789_ID2	LITERAL1
+MASSMORE_ST7789_ID3	LITERAL1
+MASSMORE_ST7789_WIDTH	LITERAL1
+MASSMORE_ST7789_HEIGHT	LITERAL1
+MASSMORE_ST7789_TOUCH_ADDR	LITERAL1
+Massmore_Font_Kanit_20	LITERAL1
+Massmore_Font_Kanit_28	LITERAL1
+Massmore_Font_Kanit_40	LITERAL1
+Massmore_Font_Sarabun_24	LITERAL1
+Massmore_Font_Sarabun_32	LITERAL1
+Massmore_Font_Sarabun_48	LITERAL1
